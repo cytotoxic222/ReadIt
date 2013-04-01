@@ -1,6 +1,6 @@
-<div class="depot_form">
+<div class="user_form">
 
-<%= form_for(@user) do |f| %>
+<%= form_for @user, :html => { :multipart => true } do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -15,9 +15,19 @@
 
   <fieldset>
     <legend>Enter User Details</legend>
+  
+  <div>
+    <%= f.label :first_name, 'First Name' %>:
+    <%= f.text_field :first_name, size: 40 %>
+  </div>
 
   <div>
-    <%= f.label :name %>:
+    <%= f.label :last_name, 'Last Name' %>:
+    <%= f.text_field :last_name, size: 40 %>
+  </div>
+
+  <div>
+    <%= f.label :name, 'Username' %>:
     <%= f.text_field :name, size: 40 %>
   </div>
 
@@ -28,6 +38,10 @@
   <div>
     <%= f.label :password_confirmation, 'Confirm' %>:
     <%= f.password_field :password_confirmation, size: 40 %>
+  </div>
+
+  <div>
+    <%= f.file_field :image %>
   </div>
 
   <div>

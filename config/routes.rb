@@ -1,4 +1,7 @@
 ReadIt::Application.routes.draw do
+  resources :books
+
+
   get "admin" => "admin#index"
 
   controller :sessions do

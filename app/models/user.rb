@@ -1,7 +1,12 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :password, :password_confirmation
+  attr_accessible :name, :password, :password_confirmation, :image, :first_name, :last_name
   validates :name, presence: true, uniqueness: true
   has_secure_password
+
+  has_attached_file :image, :styles => { :small => "150x150>" },
+                    :default_url => "/images/:style/missing.jpg"
+
+  has_many :books
 
   after_destroy :ensure_an_admin_remains
   private

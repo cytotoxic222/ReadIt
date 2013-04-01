@@ -1,13 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
-  <%= @user.name %>
+  <b>User Image:</b>
+  <%= image_tag @user.image.url(:small) %>
 </p>
 
 <p>
-  <b>Password digest:</b>
-  <%= @user.password_digest %>
+	<b>First Name:</b>
+	<%= @user.first_name %>
+</p>
+
+<p>
+	<b>Last Name:</b>
+	<%= @user.last_name %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%= @user.name %>
 </p>
 
 
