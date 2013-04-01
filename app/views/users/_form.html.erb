@@ -45,6 +45,11 @@
   </div>
 
   <div>
+    <%= f.label :roles %>
+    <%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
+  </div>
+
+  <div>
     <%= f.submit %>
   </div>
 </fieldset>
