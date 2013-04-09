@@ -11,7 +11,9 @@ ReadIt::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-    resources :books
+    resources :books do |book|
+      resources :reviews, :only => :create
+    end
 
   # Sample resource route with options:
   #   resources :products do

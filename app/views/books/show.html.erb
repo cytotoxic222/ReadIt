@@ -1,20 +1,17 @@
-<p id="notice"><%= notice %></p>
+<% title @book.title %>  
+  
+<h2><%=link_to(h(@book.title), book_path(@book)) %></h2>  
+<h3><%=h "by: " + @book.author %></h3>
+<p><%= @book.description %></p> 
 
-<p>
-  <b>Title:</b>
-  <%= @book.title %>
-</p>
+<% if @reviews %>
+	<h3>Reviews</h3>
 
-<p>
-  <b>Description:</b>
-  <%= @book.description %>
-</p>
+	<% for review in @reviews do %>
+		<p><em><%=h(review.author) %></em> <%= "Rating: " + review.rating.to_s + "/5" %></p>
+		<p><%=h review.text %></p>
+	<% end %>
+<% end %>
 
-<p>
-  <b>Image url:</b>
-  <%= @book.image_url %>
-</p>
-
-
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<h3>Post Your Review!</h3>
+<%= render "form" %>

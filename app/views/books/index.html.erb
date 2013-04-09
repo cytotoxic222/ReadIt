@@ -1,7 +1,7 @@
 <% title "My Books" %>
 
 <% for book in @books do %>
-	<h2><%=h book.title %></h2>
+	<h2><%=link_to(h(book.title), book_path(book)) %></h2>
 	<h3><%=h "by: " + book.author %></h3>
 	<p><%= book.description %></p>
 <% end %>
