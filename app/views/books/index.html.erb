@@ -1,5 +1,5 @@
 <% for book in @books do %>
 	<h2><%=h book.title %></h2>
-	<h3><%=h book.author %></h3>
+	<h3><%=h "by: " + book.author %></h3>
 	<p><%= book.description %></p>
 <% end %>
