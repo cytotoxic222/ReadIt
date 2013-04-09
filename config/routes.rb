@@ -16,6 +16,19 @@ ReadIt::Application.routes.draw do
     end
 
     resource :admin_session
+    resource :user_session
+    resources :users
+
+
+
+    # namespace :admin do
+    #   resources :books, :reviews
+    # end
+
+    # namespace :user do
+    #   resources :books, :reviews
+    # end
+
 
   # Sample resource route with options:
   #   resources :products do

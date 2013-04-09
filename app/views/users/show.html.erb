@@ -1,25 +1,9 @@
-<p id="notice"><%= notice %></p>
+<% if current_user %>
+	<p>
+		User Actions:
 
-<p>
-  <b>User Image:</b>
-  <%= image_tag @user.image.url(:small) %>
-</p>
+	</p>
+<% end %>
 
-<p>
-	<b>First Name:</b>
-	<%= @user.first_name %>
-</p>
+<% title "Welcome, " + @user.username %>  
 
-<p>
-	<b>Last Name:</b>
-	<%= @user.last_name %>
-</p>
-
-<p>
-  <b>Username:</b>
-  <%= @user.name %>
-</p>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

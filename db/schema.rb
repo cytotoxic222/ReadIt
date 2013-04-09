@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130409212647) do
+ActiveRecord::Schema.define(:version => 20130409232354) do
 
   create_table "admins", :force => true do |t|
     t.string   "username"
@@ -51,6 +51,9 @@ ActiveRecord::Schema.define(:version => 20130409212647) do
     t.string   "persistence_token", :null => false
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
   end
 
 end

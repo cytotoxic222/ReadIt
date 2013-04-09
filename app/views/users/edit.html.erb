@@ -1,6 +1,17 @@
-<h1>Editing user</h1>
+<% title "Editing #{@user.username}" %> 
+<%= form_for(@user) do |form| %>  
+  <p>  
+    <%= form.label :email %><br/>  
+    <%= form.text_field :email %>  
+  </p>  
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+  <p><%= form.label :password %></p>
+  <p><%= form.password_field :password %></p>
+  
+  <p>
+    <%= form.label :password_confirmation %><br />
+    <%= form.password_field :password_confirmation %>
+  </p>
+  
+  <%= form.submit "Save" %>  
+<% end %>  
