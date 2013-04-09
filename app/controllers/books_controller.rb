@@ -1,4 +1,7 @@
 class BooksController < ApplicationController
+	before_filter :admin_required, :only => [:new, :edit, :destroy]
+	before_filter :login_required, :except => [:index, :show]
+
 	def index
 		@books = Book.all
 	end
@@ -42,4 +45,19 @@ class BooksController < ApplicationController
 		flash[:notice] = "#{book.title} deleted."  
 		redirect_to books_path  
 	end  
+
+	private
+	def admin_required
+		unless current_admin
+			flash[:error] = "Only logged in admins can access this page"
+			redirect_to books_path
+		end
+	end
+
+	def login_required
+		unless current_user
+			flash[:error] = "Must be logged in to view this page"
+			redirect_to books_path
+		end
+	end
 end

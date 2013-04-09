@@ -6,6 +6,8 @@
 	<p><%= book.description %></p>
 <% end %>
 
-<p>
-	Admin actions: <%= link_to "Add New Book", new_book_path %>
-</p>
+<% if current_admin %>
+	<p>
+		Admin actions: <%= link_to "Add New Book", new_book_path %>
+	</p>
+<% end %>
