@@ -10,7 +10,7 @@ gem 'sqlite3'
 gem 'populator', :group => :development
 gem 'faker', :group => :development
 gem 'nifty-generators', '>= 0.4.0', :group => :development
-gem 'authlogic'
+gem 'authlogic', :git => "git://github.com/binarylogic/authlogic.git"
 
 
 # Gems used only for assets and not required

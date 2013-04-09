@@ -15,6 +15,8 @@ ReadIt::Application.routes.draw do
       resources :reviews, :only => :create
     end
 
+    resource :admin_session
+
   # Sample resource route with options:
   #   resources :products do
   #     member do
