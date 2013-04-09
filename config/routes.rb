@@ -1,20 +1,4 @@
 ReadIt::Application.routes.draw do
-  resources :books
-
-
-  get "admin" => "admin#index"
-
-  controller :sessions do
-    get 'login' => :new
-    post 'login' => :create
-    delete 'logout' => :destroy
-  end
-
-  resources :users
-
-  root :to => 'pages#index'
-
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
