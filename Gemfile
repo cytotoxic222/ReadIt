@@ -7,8 +7,9 @@ gem 'rails', '3.2.11'
 
 gem 'sqlite3'
 
-gem 'populator'
-gem 'faker'
+gem 'populator', :group => :development
+gem 'faker', :group => :development
+gem 'nifty-generators', '>= 0.4.0', :group => :development
 
 
 # Gems used only for assets and not required
