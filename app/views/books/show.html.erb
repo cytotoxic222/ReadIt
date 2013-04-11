@@ -7,6 +7,8 @@
 <% end %>
 
 <% title @book.title %>  
+
+<%= image_tag @book.cover_image.url(:medium) %>
   
 <h3><%=h "by: " + @book.author %></h3>
 <p><%= @book.description %></p> 

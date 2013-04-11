@@ -11,9 +11,9 @@ namespace :db do
 
 			Review.populate 2..10 do |review|
 				review.book_id = book.id
-				review.rating = [0, 1, 2, 3, 4, 5]
-				review.author = Faker::Name.name
-				review.text = Populator.sentences(2..5)
+				review.rating  = [0, 1, 2, 3, 4, 5]
+				review.author  = Faker::Name.name
+				review.text    = Populator.sentences(2..5)
 			end
 		end
 	end	

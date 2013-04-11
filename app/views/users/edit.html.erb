@@ -1,5 +1,9 @@
 <% title "Editing #{@user.username}" %> 
-<%= form_for(@user) do |form| %>  
+<%= form_for(@user) do |form| %> 
+  <p>
+    <%= form.label :avatar %><br/>  
+    <%= form.file_field :avatar %>
+  </p>  
   <p>  
     <%= form.label :email %><br/>  
     <%= form.text_field :email %>  

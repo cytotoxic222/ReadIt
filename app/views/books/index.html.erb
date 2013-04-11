@@ -2,6 +2,7 @@
 
 <% for book in @books do %>
 	<h2><%=link_to(h(book.title), book_path(book)) %></h2>
+	<%= image_tag book.cover_image.url(:medium), :width => "25%" %>
 	<h3><%=h "by: " + book.author %></h3>
 	<p><%= book.description %></p>
 <% end %>
