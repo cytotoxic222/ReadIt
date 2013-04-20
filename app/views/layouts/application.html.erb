@@ -10,9 +10,9 @@
   <body> 
     <div id="container">
       <% if current_admin %>
-        <p><%= link_to "Logout", admin_session_path(current_admin_session), :method => :delete %></p>
+        <p><%= link_to "Admin Logout", admin_session_path(current_admin_session), :method => :delete %></p>
       <% else %>
-        <p><%= link_to "Login", new_admin_session_path %></p>
+        <p><%= link_to "Admin Login", new_admin_session_path %></p>
       <% end %>
 
       <% if current_user %>

@@ -7,6 +7,8 @@
 <% end %>
 
 <% title @book.title %>  
+<%=link_to(h("Back to more books"), books_path) %>
+
 
 <%= image_tag @book.cover_image.url(:medium) %>
   

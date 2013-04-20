@@ -3,7 +3,7 @@ class BooksController < ApplicationController
 	before_filter :login_required, :except => [:index, :show]
 
 	def index
-		@books = Book.all
+		@books = Book.paginate(:page => params[:page], :per_page => 10)
 	end
 
 	def show

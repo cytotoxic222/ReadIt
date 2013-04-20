@@ -79,6 +79,7 @@ GEM
     mime-types (1.22)
     multi_json (1.7.2)
     nifty-generators (0.4.6)
+    pg (0.15.1)
     polyglot (0.3.3)
     populator (1.0.0)
     rack (1.4.5)
@@ -126,6 +127,7 @@ GEM
     uglifier (2.0.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    will_paginate (3.0.4)
 
 PLATFORMS
   ruby
@@ -137,8 +139,10 @@ DEPENDENCIES
   jquery-rails
   nifty-generators (>= 0.4.0)
   paperclip!
+  pg
   populator
   rails (= 3.2.11)
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
+  will_paginate (~> 3.0.0)
