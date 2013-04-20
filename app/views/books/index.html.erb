@@ -1,15 +1,16 @@
 <% title "Books" %>
-<% javascript :defaults, 'endless_page' %>
+<% javascript :endless_page, 'endless_page' %>
 <div id="books">
-<% for book in @books do %>
-	<div>
-		<h2><%=link_to(h(book.title), book_path(book)) %></h2>
-		<%= image_tag book.cover_image.url(:medium), :width => "25%" %>
-		<h3><%=h "by: " + book.author %></h3>
-		<p><%= simple_format(truncate(book.description, :length => 50, :separator => ' ')) %></p>
-	</div>
-<% end %>
+	<% for book in @books do %>
+		<div>
+			<h2><%=link_to(h(book.title), book_path(book)) %></h2>
+			<%= image_tag book.cover_image.url(:medium), :width => "25%" %>
+			<h3><%=h "by: " + book.author %></h3>
+			<p><%= simple_format(truncate(book.description, :length => 50, :separator => ' ')) %></p>
+		</div>
+	<% end %>
 </div>
+<p id="loading">Loading more page results...</p>
 
 <% if current_admin %>
 	<p>
