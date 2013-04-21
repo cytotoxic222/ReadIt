@@ -3,8 +3,6 @@ cover_images/medium/missing.jpg: cover_images/medium/missing-44155b89f3dddaa75c8
 cover_images/medium/missing/index.jpg: cover_images/medium/missing-44155b89f3dddaa75c8ed786bfada1fe.jpg
 application.js: application-1b0bc77be532d7f6cb098efec10ea260.js
 application/index.js: application-1b0bc77be532d7f6cb098efec10ea260.js
-endless_page.js: endless_page-d75cb2f6ce0ed5a3c9f34010a8a44d13.js
-endless_page/index.js: endless_page-d75cb2f6ce0ed5a3c9f34010a8a44d13.js
 application.css: application-adefa85ef2dfc1312d4fb0150487242d.css
 application/index.css: application-adefa85ef2dfc1312d4fb0150487242d.css
 jquery.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
