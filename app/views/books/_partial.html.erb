@@ -1,6 +1,6 @@
 <% for book in @books do %>
 	<div>
-		<h2><%=link_to(h(book.title), book_path(book)) %></h2>
+		<h2><%= link_to(h(book.title), book_path(book)) %></h2>
 		<%= image_tag book.cover_image.url(:medium), :width => "25%" %>
 		<h3><%=h "by: " + book.author %></h3>
 		<p><%= simple_format(truncate(book.description, :length => 50, :separator => ' ')) %></p>

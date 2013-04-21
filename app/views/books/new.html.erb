@@ -1,5 +1,5 @@
 <% title "New Book" %> 
-<%= form_for(@book), :html => { :multipart => true } do |form| %> 
+<%= form_for @book, :html => { :multipart => true } do |form| %> 
   <p>
     <%= form.label :cover_image %><br/>  
     <%= form.file_field :cover_image %>
