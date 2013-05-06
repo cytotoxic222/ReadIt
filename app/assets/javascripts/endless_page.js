@@ -21,4 +21,4 @@ function pageHeight() {
   return Math.max(document.body.scrollHeight, document.body.offsetHeight);
 }
 
-document.observe('dom:loaded', checkScroll);
+window.document.observe('dom:loaded', checkScroll);
